@@ -1,0 +1,22 @@
+set runtimepath=~/.vimperator/plugin/
+
+set titlestring="Mozilla firefox"
+
+autocmd LocationChange iknow\.jp :fmap <Right> <Left> <Up> <Down> 
+
+noremap j 5<C-e>
+noremap k 5<C-y>
+
+noremap h <A-Left>
+noremap l <A-Right>
+
+noremap H gT
+noremap L gt
+
+map <Left> <C-p>
+map <Right> <C-n>
+
+map <S-Right> :tabmove! +1<CR>
+map <S-Left> :tabmove! -1<CR>
+
+javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
